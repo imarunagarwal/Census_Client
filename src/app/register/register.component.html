@@ -1,0 +1,48 @@
+<!-- <nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">
+      <i class="material-icons">people</i>Census Made Easy</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a (click)="Logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-inverse" style="flex-wrap: unset;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">Census Made Easy</div>
+    </div>
+    <ul class="nav navbar-nav navbar-right" style="flex-direction: row; ">
+      <li><a (click)="DashBoard()"><span class="glyphicon glyphicon-globe"></span> DashBoard</a></li>
+      <li><a (click)="Logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <div class="card grey lighten-2">
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width tabs-transparent">
+            <li class="tab">
+              <a routerLink='/house' routerLinkActive='active'>House Lisitng</a>
+            </li>
+            <li class="tab">
+              <a routerLink='/population' routerLinkActive='active'>Population Register</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-content white">
+          <div class="row">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

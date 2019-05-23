@@ -1,0 +1,17 @@
+
+<table class='table' *ngIf="users && users.length">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody *ngFor='let user of users'>
+        <tr>
+            <td><img src="data:image/JPEG;base64,{{user.ImageUrl}}" width=100px height="100px"></td>
+            <td>{{user.FirstName | uppercase }} {{user.LastName | uppercase }}</td>
+            <td>{{user.Address}}</td>  
+        </tr>
+    </tbody>
+</table>

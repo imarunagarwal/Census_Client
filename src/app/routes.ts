@@ -26,18 +26,18 @@ export const appRoutes: Routes = [
 
     { path: 'dashboard', component: DashboardComponent },
 
-    { path: 'userInfo', component: UserInfoComponent ,canActivate:[AuthGuard,RoleGuardService] },
+    { path: 'userInfo', component: UserInfoComponent ,canActivate:[AuthGuard] },
 
     { 
-        path: 'pending', component: AdminViewComponent ,canActivate:[AuthGuard,RoleGuardService],
+        path: 'pending', component: AdminViewComponent ,canActivate:[AuthGuard],
         children: [{ path: '', component: PendingRequestsComponent }]
     },
     { 
-        path: 'declined', component: AdminViewComponent ,canActivate:[AuthGuard,RoleGuardService],
+        path: 'declined', component: AdminViewComponent ,canActivate:[AuthGuard],
         children: [{ path: '', component: DeclinedRequestsComponent }]
     },
     { 
-        path: 'approved', component: AdminViewComponent ,canActivate:[AuthGuard,RoleGuardService],
+        path: 'approved', component: AdminViewComponent ,canActivate:[AuthGuard],
         children: [{ path: '', component: ApprovedRequestsComponent }]
     },
     {
@@ -49,11 +49,11 @@ export const appRoutes: Routes = [
         children: [{ path: '', component: SignInComponent }]
     },
     {
-        path: 'house', component: RegisterComponent ,canActivate:[AuthGuard,RoleGuardService],
+        path: 'house', component: RegisterComponent ,canActivate:[AuthGuard],
         children: [{ path: '', component: HouseListingComponent }]
     },
     {
-        path: 'population', component: RegisterComponent, canActivate:[AuthGuard,RoleGuardService],
+        path: 'population', component: RegisterComponent, canActivate:[AuthGuard],
         children: [{ path: '', component: PopulationRegisterComponent }]
     },
     {
